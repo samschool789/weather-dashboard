@@ -10,7 +10,7 @@
 # Show the Future weather conditions for the city 
 
 
-[project link](https://github.com/samschool789/work-day-scheduler)
+[project link](https://github.com/samschool789/weather-dashboard)
 
 ![image](./images/img23.png)
 
