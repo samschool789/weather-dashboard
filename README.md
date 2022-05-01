@@ -12,7 +12,7 @@
 
 [project link](https://github.com/samschool789/work-day-scheduler)
 
-![image](img23.png)
+![image](./images/img23.png)
 
 
 
