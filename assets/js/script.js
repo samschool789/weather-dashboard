@@ -20,11 +20,31 @@ function getWeather(cityname) {
           var tempEl = document.createElement("p");
           tempEl.textContent = temp;
           currentWeatherEl.append(tempEl);
+
+          fetch(weatherApi)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            var humidity = data.current.humidity;
+            var humidityEl = document.createElement("p")
+            humidityEl.textContent = humidity;
+            currentWeatherEl.append(humidityEl);
+
+            fetch(weatherApi)
+            .then((response) => response.json())
+            .then((data) => {
+            console.log(data);
+            var uvi = data.current.uvi;
+            var uviEl = document.createElement("p");
+            uviEl.textContent = uvi;
+             currentWeatherEl.append(uviEl);
+            });
+          });
         });
     });
 }
 
-searchButton.addEventListener("click", function () {
+  searchButton.addEventListener("click", function () {
   var cityname = searchEl.value;
   getWeather(cityname);
 });
